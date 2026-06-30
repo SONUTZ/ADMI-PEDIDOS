@@ -362,7 +362,7 @@ const ADMIN_CONFIG = {
   ownerPassword: "liamspizza2024",
 
   // 👉 Debe ser EXACTAMENTE la misma URL que usaste en pedidos.html (termina en /exec)
-  googleSheetsURL: "https://script.google.com/macros/s/AKfycbxYA7ICgLH4aRrbhrLaR8otnIS0zdY_lWO0mC5rCedQm4PNMCIALJW2Lod9Xvdogal9/exec",
+  googleSheetsURL: "https://script.google.com/macros/s/AKfycbwkJQj7hCW3bGDRAHdyPGwYBs8MipRsvUOnsceZlXFMoJ2Cs04Y3l-8iHns0udA1fBo/exec",
 
   // 👉 Debe coincidir EXACTAMENTE con la clave SECRET_KEY que pongas en Apps Script
   apiSecret: "liams-secret-2024"
@@ -426,7 +426,7 @@ function cargarPedidos(){
   statusMsg.textContent = "Cargando pedidos…";
   list.innerHTML = "";
 
-  if (!ADMIN_CONFIG.googleSheetsURL || ADMIN_CONFIG.googleSheetsURL.indexOf("PEGA_AQUI") === 0) {
+  if (!ADMIN_CONFIG.googleSheetsURL || ADMIN_CONFIG.googleSheetsURL.indexOf("https://docs.google.com/spreadsheets/d/1TwVnWczeIT_c55AdQvBwaZhRh4Zjl-fhVYLwSKax5m8/edit?usp=sharing") === 0) {
     statusMsg.textContent = "Falta configurar la URL de Google Sheets en ADMIN_CONFIG.";
     return;
   }
