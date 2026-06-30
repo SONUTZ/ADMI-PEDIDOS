@@ -251,11 +251,36 @@ main.admin-main{
 .btn-close{background:var(--paper);color:var(--ink);border:1px solid var(--ink) !important;}
 
 @media print{
+  @page{ size: 80mm auto; margin: 0; }
+  html, body{ width:80mm; height:auto !important; margin:0; padding:0; }
   body *{visibility:hidden;}
   .overlay, .overlay *{visibility:visible;}
-  .overlay{position:absolute;inset:0;background:#fff;padding:0;}
+  .overlay{
+    position:static;
+    inset:auto;
+    background:#fff;
+    padding:0;
+    display:block;
+    height:auto;
+    width:80mm;
+  }
+  .ticket-wrap{
+    max-height:none;
+    overflow:visible;
+    align-items:flex-start;
+    width:80mm;
+  }
   .ticket-actions{display:none;}
-  .ticket{box-shadow:none;}
+  .ticket{
+    box-shadow:none;
+    width:80mm;
+    max-width:80mm;
+    clip-path:none;
+    margin:0;
+    padding:8px 10px;
+    page-break-after:avoid;
+    page-break-inside:avoid;
+  }
 }
 </style>
 </head>
@@ -514,3 +539,4 @@ document.getElementById("btn-close-ticket").onclick = function(){
 
 </body>
 </html>
+
